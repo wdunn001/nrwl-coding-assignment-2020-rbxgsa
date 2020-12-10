@@ -3,7 +3,8 @@ import {
   MatAutocompleteModule,
   MatButtonModule,
   MatCardModule,
-  MatIconModule,
+MatDialogModule,
+    MatIconModule,
   MatInputModule,
   MatListModule,
   MatOptionModule,
@@ -20,7 +21,8 @@ export const materialModules = [
   MatAutocompleteModule,
   MatSelectModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatDialogModule
 ];
 @NgModule({
   imports: materialModules,

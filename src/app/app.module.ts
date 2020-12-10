@@ -12,10 +12,17 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing";
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
+import { TicketDetailsComponent } from "./components/ticket-details/ticket-details.component";
+import { CreateTicketComponent } from "./components/create-ticket/create-ticket.component";
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, TicketListComponent, TicketDetailsComponent],
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+    TicketListComponent,
+    TicketDetailsComponent,
+    CreateTicketComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -38,6 +45,7 @@ import { TicketDetailsComponent } from './components/ticket-details/ticket-detai
     ReactiveFormsModule
   ],
   providers: [BackendService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CreateTicketComponent]
 })
 export class AppModule {}
