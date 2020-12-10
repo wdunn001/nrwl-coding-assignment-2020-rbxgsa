@@ -5,6 +5,7 @@ import {
   MatCardModule,
   MatIconModule,
   MatInputModule,
+  MatListModule,
   MatOptionModule,
   MatSelectModule,
   MatToolbarModule
@@ -18,7 +19,8 @@ export const materialModules = [
   MatOptionModule,
   MatAutocompleteModule,
   MatSelectModule,
-  MatIconModule
+  MatIconModule,
+  MatListModule
 ];
 @NgModule({
   imports: materialModules,

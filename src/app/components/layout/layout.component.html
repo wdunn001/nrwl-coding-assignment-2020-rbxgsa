@@ -1,2 +1,7 @@
-<mat-toolbar>Tickets</mat-toolbar>
-<mat-card ></mat-card>
+<mat-toolbar color="accent">Tickets
+  <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="addTicket()">
+        <mat-icon>add</mat-icon>
+      </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

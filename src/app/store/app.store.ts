@@ -1,5 +1,5 @@
 import { ActionReducerMap, MetaReducer, ActionReducer } from "@ngrx/store";
-import { TicketReducer, TicketState } from "./ticket.store";
+import { ticketReducer, TicketState } from "./ticket.store";
 import { localStorageSync } from "ngrx-store-localstorage";
 
 const STORE_KEYS_TO_PERSIST_IN_LOCAL_STORAGE = [];
@@ -7,11 +7,11 @@ const STORE_KEYS_TO_PERSIST_IN_LOCAL_STORAGE = [];
 const STORE_KEYS_TO_PERSIST_IN_SESSION_STORAGE = [];
 
 export interface AppState {
-  ticket: TicketState;
+  tickets: TicketState;
 }
 
 export const appReducer: ActionReducerMap<AppState> = {
-  ticket: TicketReducer
+  tickets: ticketReducer
 };
 
 export function localStorageSyncReducer(

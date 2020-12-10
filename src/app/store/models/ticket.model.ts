@@ -1,5 +1,5 @@
 export class Ticket {
-  id!: number;
+  id!: string;
   name!: string;
   description?: string;
 

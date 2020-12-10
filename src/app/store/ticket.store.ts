@@ -13,7 +13,7 @@ export const adapter = createEntityAdapter<Ticket>({
 });
 
 export interface TicketState extends EntityState<Ticket> {
-  selectedTicketId: number | null;
+  selectedTicketId: string | null;
   selectedTicket: Ticket;
   ticketsLoaded: boolean;
 }
@@ -77,12 +77,12 @@ export class TicketUpdateMany implements Action {
 
 export class TicketRemoveOne implements Action {
   readonly type = ticketActionTypes.REMOVE_ONE;
-  constructor(public payload: number) {}
+  constructor(public payload: string) {}
 }
 
 export class TicketRemoveMany implements Action {
   readonly type = ticketActionTypes.REMOVE_MANY;
-  constructor(public payload: number[]) {}
+  constructor(public payload: string[]) {}
 }
 
 export class TicketRemoveAll implements Action {
@@ -92,7 +92,7 @@ export class TicketRemoveAll implements Action {
 export class TicketIdSelect implements Action {
   readonly type = ticketActionTypes.IDSELECT;
 
-  constructor(public payload: number) {}
+  constructor(public payload: string) {}
 }
 
 export class TicketSelect implements Action {
@@ -208,7 +208,7 @@ export const selectCurrentTicketbyId = createSelector(
   selectCurrentTicketId,
   (ticketEntities, ticketId) => ticketEntities[ticketId]
 );
-export const getTicketById = (id: number) =>
+export const getTicketById = (id: string) =>
   createSelector(
     selectTicketEntities,
     ticketEntities => ticketEntities[id]

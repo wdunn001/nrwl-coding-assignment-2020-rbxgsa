@@ -12,9 +12,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, TicketListComponent],
+  declarations: [AppComponent, LayoutComponent, TicketListComponent, TicketDetailsComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

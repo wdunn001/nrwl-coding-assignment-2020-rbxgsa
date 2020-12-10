@@ -1,0 +1,15 @@
+<mat-list role="list">
+	<mat-list-item fxFlexLayout="row" *ngFor="let ticket of tickets | async" role="listitem">
+		<span fxFlex>{{ticket.name}}</span>
+		<div fxFlexAlign="end" class="">
+			<button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="addTicket()">
+        <mat-icon>search</mat-icon>
+      </button>
+			<button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="removeTicket(ticket.id)">
+        <mat-icon color="warn">delete</mat-icon>
+      </button>
+		</div>
+
+
+	</mat-list-item>
+</mat-list>
