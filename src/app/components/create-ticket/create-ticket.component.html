@@ -6,12 +6,14 @@
 	</mat-card-header>
 
 	<mat-card-content *ngIf="formGroup">
-		<form [formGroup]="formGroup" fxLayoutGap="20px" fxLayout="row" fxLayout.lt-lg="column" fxFlex="80" fxFlex.lt-lg="100" >
-			<mat-form-field class="example-full-width">
-				<input matInput placeholder="Ticket Name" formControlName="name">
+		<form [formGroup]="formGroup" fxLayoutGap="20px" fxLayout="row" fxLayout.lt-lg="column" fxFlex="80"
+			fxFlex.lt-lg="100">
+			<mat-label>Name</mat-label>
+			<mat-form-field>
+				<input matInput formControlName="name">
       </mat-form-field>
 
-				<mat-form-field class="example-full-width">
+				<mat-form-field>
 					<mat-label>Description</mat-label>
 					<textarea matInput placeholder="Description" formControlName="description"></textarea>
 				</mat-form-field>

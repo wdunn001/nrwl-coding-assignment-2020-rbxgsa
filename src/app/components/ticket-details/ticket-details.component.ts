@@ -1,6 +1,10 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { Store } from "@ngrx/store";
+import { Observable } from "rxjs";
 import { AppState } from "../../store/app.store";
+import { Ticket } from "../../store/models/ticket.model";
+import { getTicketById } from "../../store/ticket.store";
 
 @Component({
   selector: "app-ticket-details",
@@ -8,7 +12,12 @@ import { AppState } from "../../store/app.store";
   styleUrls: ["./ticket-details.component.css"]
 })
 export class TicketDetailsComponent implements OnInit {
-  constructor(private store: Store<AppState>) {}
+  ticket$: Observable<Ticket>;
+  constructor(private store: Store<AppState>, private route: ActivatedRoute) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.ticket$ = this.store.select(getTicketById(params["id"]));
+    });
+  }
 }
