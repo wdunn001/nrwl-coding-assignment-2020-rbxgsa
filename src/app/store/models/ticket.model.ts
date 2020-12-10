@@ -1,5 +1,9 @@
 export class Ticket {
-  constructor(json: Partial<Ticket>){
+  id!: number;
+  name!: string;
+  description?: string;
+
+  constructor(json: Partial<Ticket>) {
     Object.assign(this, json);
   }
 }
