@@ -10,8 +10,13 @@
     "@angular/platform-browser": "8.1.2",
     "@angular/platform-browser-dynamic": "8.1.2",
     "@angular/router": "8.1.2",
+    "@ngrx/entity": "8.1.0",
+    "@ngrx/store": "8.1.0",
+    "@ngrx/store-devtools": "8.1.0",
     "core-js": "2.6.2",
+    "ngrx-store-localstorage": "8.0.0",
     "rxjs": "6.5.2",
+    "tslib": "^2.0.3",
     "zone.js": "0.9.1"
   },
   "scripts": {
