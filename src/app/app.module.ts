@@ -5,13 +5,20 @@ import { BackendService } from "./backend.service";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { appReducer, metaReducers } from "./store/app.store";
-import { LayoutComponent } from './components/layout/layout.component';
-import { TicketListComponent } from './components/ticket-list/ticket-list.component';
+import { LayoutComponent } from "./components/layout/layout.component";
+import { TicketListComponent } from "./components/ticket-list/ticket-list.component";
+import { MaterialModule } from "./material/material.module";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AppRoutingModule } from "./app-routing";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [AppComponent, LayoutComponent, TicketListComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+
     StoreModule.forRoot(appReducer, {
       metaReducers,
       runtimeChecks: {
@@ -22,7 +29,12 @@ import { TicketListComponent } from './components/ticket-list/ticket-list.compon
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: false
-    })
+    }),
+    FlexLayoutModule,
+    AppRoutingModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [BackendService],
   bootstrap: [AppComponent]
