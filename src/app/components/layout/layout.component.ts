@@ -17,6 +17,9 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {}
 
   addTicket() {
-    this.dialog.open(CreateTicketComponent);
+    this.dialog.open(CreateTicketComponent, {
+      width: "400px",
+      panelClass: "custom-dialog"
+    });
   }
 }

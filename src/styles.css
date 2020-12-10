@@ -9,3 +9,7 @@ body {
 .full-width {
   width: 100%;
 }
+
+.custom-dialog > mat-dialog-container {
+  background: none !important;
+}
