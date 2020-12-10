@@ -7,3 +7,4 @@ export class Ticket {
     Object.assign(this, json);
   }
 }
+

@@ -24,6 +24,6 @@ export class TicketListComponent implements OnInit {
   }
 
   goToDetails(guid: string) {
-    this.router.navigate(["/tickets/", guid]);
+    this.router.navigate(["/tickets", guid]);
   }
 }

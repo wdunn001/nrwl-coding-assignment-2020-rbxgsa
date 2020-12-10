@@ -1,3 +1,6 @@
+<button mat-button aria-label="Example icon button with a vertical three dot icon" (click)="back()">
+       Back to list
+</button>
 <div *ngIf="ticket$ | async as ticket">
 	<span>name: {{ticket.name}}</span>
 	<span>description:</span>

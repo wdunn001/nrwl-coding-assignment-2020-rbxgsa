@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 import { AppState } from "../../store/app.store";
@@ -13,11 +13,19 @@ import { getTicketById } from "../../store/ticket.store";
 })
 export class TicketDetailsComponent implements OnInit {
   ticket$: Observable<Ticket>;
-  constructor(private store: Store<AppState>, private route: ActivatedRoute) {}
+  constructor(
+    private store: Store<AppState>,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.ticket$ = this.store.select(getTicketById(params["id"]));
     });
+  }
+
+  back() {
+    this.router.navigate(["/tickets"]);
   }
 }
